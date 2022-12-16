@@ -12,6 +12,7 @@ function App() {
 
   const [currentRepo, setCurrentRepo] = useState('');
   const [repos, setRepos] = useState([]);
+  
 
   const handleSearchRepo = async () => {
     const {data} = await api.get(`repos/${currentRepo}`)
@@ -30,14 +31,18 @@ function App() {
     }  
   }
   
+  const handleRemoveRepo = (id) => {
+    let newList = repos.filter((repo) => repo.id !== id)
+    setRepos(newList);
 
+  }
 
   return (
     <Container>
       <img src={gitLogo} width={150} alt="Github Logo"/>
       <Input value={currentRepo} onChange={(e) => setCurrentRepo(e.target.value)} />
       <Button onClick={handleSearchRepo}/>
-      {repos.map(repo => <ItemRepo repo={repo}/> )}  
+      {repos.map(repo => <ItemRepo handleRemoveRepo={handleRemoveRepo} repo={repo}/> )}  
     </Container>
   );
 }
