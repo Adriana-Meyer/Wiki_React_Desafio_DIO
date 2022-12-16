@@ -4,7 +4,7 @@ import { InputContainer } from './input-styles';
 function Input({value, onChange}) {
     return (
         <InputContainer>
-            <input value={value} onChange={onChange}/>
+            <input placeholder='Digite o repositório que deseja listar...' value={value} onChange={onChange}/>
         </InputContainer>
     )
 }

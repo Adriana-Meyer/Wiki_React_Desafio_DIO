@@ -4,7 +4,7 @@ import { ButtonContainer } from './button-styles';
 function Button({onClick}) {
     return (
         <ButtonContainer onClick={onClick}>
-            Buscar
+            Adicionar à lista
         </ButtonContainer>
     )
 }

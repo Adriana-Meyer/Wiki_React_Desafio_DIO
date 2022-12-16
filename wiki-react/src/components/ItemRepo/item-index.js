@@ -14,7 +14,6 @@ function ItemRepo({repo, handleRemoveRepo}) {
             <p>{repo.description}</p>
             <a href={repo.html_url} target="_blank" className="verRepo">Ver Repositório</a>
             <a href="#" onClick={handleRemove} className="remover">Remover</a>
-            <hr />
         </ItemContainer>
     )
 }

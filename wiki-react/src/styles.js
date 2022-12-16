@@ -4,10 +4,11 @@ export default createGlobalStyle`
     *, body { 
         margin: 0;
         padding: 0;
+        font-family: 'Trebuchet MS';
     }
 
     body {
-        background-color: #22272e;
+        background-color: #010409;
         color: #ffffff;
     }
 
